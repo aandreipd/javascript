@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var saludo = "";
+
+        var name = prompt("Cómo debería llamarte?");
+        var hora = prompt("Que hora del día es?");
+
+
+        if (isNaN(hora)) {
+            alert("Introduce una hora de 0 a 24 horas")
+        }
+        else {
+            if (hora > 24) {
+                alert("El día solo tiene 24 horas!")
+            }
+            else {
+                if (hora > 19) {
+                    saludo = "Buenas noches"
+
+                } else if (hora > 12 && hora < 20) {
+                    // des de las 12 hasta las 19 serán buenas tardes
+                    saludo = "Buenas tardes";
+                } else {
+                    // hasta las 12 son buenos días
+                    saludo = "Buenos días";
+                }
+            }
+        }
+
+
+
+        alert(saludo + " " + name);
+
+
+
+    </script>
+
+
+</body>
+
+</html>
